@@ -61,59 +61,86 @@
             <div id="second-sidebar" class="col-md-3 col-lg-2 d-md-block bg-white sidebar"
                 style="max-width: 200px; padding-left: 20px;">
                 <div class="d-flex flex-column">
-                    <div class="mb-3">
-                        <a class="nav-link text-danger" href="/kanbas/home.html">Notifications</a>
-                    </div>
                     <div class="mb-3" style="border-left: 3px solid black;">
-                        <a class="nav-link text-black" href="#" style="padding-left: 10px;">Profile</a>
+                        <a class="nav-link text-danger" href="/kanbas/home.html">Home</a>
                     </div>
                     <div class="mb-3">
-                        <a class="nav-link text-danger" href="#">Files</a>
+                        <a class="nav-link text-black" href="#">Modules</a>
                     </div>
                     <div class="mb-3">
-                        <a class="nav-link text-danger" href="#">Settings</a>
+                        <a class="nav-link text-danger" href="#">Piazza</a>
                     </div>
                     <div class="mb-3">
-                        <a class="nav-link text-danger" href="#">ePortfolios</a>
+                        <a class="nav-link text-danger" href="#">Zoom Meetings</a>
                     </div>
                     <div class="mb-3">
-                        <a class="nav-link text-danger" href="#">Shared Content</a>
+                        <a class="nav-link text-danger" href="#">Assignments</a>
                     </div>
                     <div class="mb-3">
-                        <a class="nav-link text-danger" href="#">The Hub</a>
+                        <a class="nav-link text-danger" href="#">Quizzes</a>
                     </div>
                     <div class="mb-3">
-                        <a class="nav-link text-danger" href="#">Qwickly Course Tools</a>
+                        <a class="nav-link text-danger" href="#">Grades</a>
                     </div>
                     <div class="mb-3">
-                        <a class="nav-link text-danger" href="#">Global Announcements</a>
+                        <a class="nav-link text-danger" href="#">People</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="#">Panopto Video</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="#">Credentials</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="#">Progress Reports (EAB Navigate)</a>
                     </div>
                 </div>
             </div>
+
 
 
             <div class="col">
-                <i class="fa fa-cog fa-3x col"></i>
-                <div class="float-end">
-                    <form action="/kanbas/profile/edit.html" class="col">
-                        <button type="submit" class="btn btn-secondary"> <i class="fa-solid fa-pencil"></i>
-                            Edit
-                            Profile</button>
-                    </form>
-                </div>
-                <h1 class="mb-4">José Annunziato</h1>
-                <div class="row justify-content-center">
-                    <h3>Contact</h3>
-                    <p>No registered services. You can add some on the settings page.</p>
-                    <h3>Biography</h3>
-                    <p>Faculty, Software Engineer, AI, Space, and renewable enthusiast.</p>
-                    <h3>Links</h3>
-                    <a href="https://www.youtube.com/@WebDevTV">Youtube</a>
-                </div>
-            </div>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Course Name</li>
+                    <li class="breadcrumb-item">Term</li>
+                    <li class="breadcrumb-item">Section</li>
+                    <li class="breadcrumb-item">></li>
+                    <li class="breadcrumb-item active">Assignment</li>
+                    <li class="breadcrumb-item">></li>
+                    <li class="breadcrumb-item active">Assignment 1</li>
+                </ol>
+                <div class="container mt-4">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search for Assignments">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button">+ Group</button>
+                            <button class="btn btn-danger" type="button">+ Assignment</button>
+                        </div>
+                    </div>
 
+                    <div class="list-group">
+                        <a href="/kanbas/assignments/edit.html"
+                            class="list-group-item list-group-item-action">Assignment 1</a>
+                        <a href="/kanbas/assignments/edit.html"
+                            class="list-group-item list-group-item-action">Assignment 2</a>
+                        <a href="/kanbas/assignments/edit.html" class="list-group-item list-group-item-action">Quiz
+                            1</a>
+                        <a href="/kanbas/assignments/edit.html" class="list-group-item list-group-item-action">Quiz
+                            2</a>
+                        <a href="/kanbas/assignments/edit.html" class="list-group-item list-group-item-action">Exam
+                            1</a>
+                        <a href="/kanbas/assignments/edit.html" class="list-group-item list-group-item-action">Exam
+                            2</a>
+                        <a href="/kanbas/assignments/edit.html"
+                            class="list-group-item list-group-item-action">Project</a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
         </div>
-    </div>
 
 </body>
 
