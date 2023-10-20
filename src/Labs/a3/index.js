@@ -3,6 +3,8 @@ import Styles from "./Styles";
 import JavaScript from "./JavaScript";
 import PathParameters from "./PathParameters";
 import ConditionalOutput from "./ConditionalOutput";
+import TodoItem from "./todos/TodoItem";
+import TodoList from "./todos/TodoList";
 
 function Assignment3() {
  return (
@@ -13,6 +15,8 @@ function Assignment3() {
      <Classes/>
      <PathParameters/>
      <JavaScript/>
+     <TodoItem/>
+     <TodoList/>
    </div>
  );
 }
