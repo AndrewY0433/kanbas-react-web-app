@@ -1,102 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/7fcc334c2e.js" crossorigin="anonymous"></script>
+
+</head>
 
 <body>
-    <table>
-        <tr>
-            <td>
-                <ul>
-                    <li><a href="/kanbas/account.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="/kanbas/courses.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar" style="max-width: 85px;">
+                <a class="nav-link text-white d-flex flex-column align-items-center justify-content-center mb-3"
+                    href="/kanbas/profile/index.html">
+                    <i class="fa-regular fa-user"></i> Account
+                </a>
+                <a class="nav-link text-white d-flex flex-column align-items-center justify-content-center mb-3"
+                    href="/kanbas/dashboard">
+                    <i class="fa-solid fa-gauge" style="color: tomato;"></i>
+                    Dashboard
+                </a>
+                <a class="nav-link text-danger d-flex flex-column align-items-center justify-content-center mb-3 bg-white"
+                    href="/kanbas/courses.html">
+                    <i class="fa-solid fa-book" style="color: tomato;"></i>
+                    Courses
+                </a>
+                <a class="nav-link text-white d-flex flex-column align-items-center justify-content-center mb-3"
+                    href="#">
+                    <i class="fa-solid fa-calendar-days" style="color: tomato;"></i>
+                    Calendar
+                </a>
+                <a class="nav-link text-white d-flex flex-column align-items-center justify-content-center mb-3"
+                    href="#">
+                    <i class="fa-solid fa-inbox" style="color: tomato;"></i>
+                    Inbox
+                </a>
+                <a class="nav-link text-white d-flex flex-column align-items-center justify-content-center mb-3"
+                    href="#">
+                    <i class="fa-solid fa-clock" style="color: tomato;"></i>
+                    History
+                </a>
+                <a class="nav-link text-white d-flex flex-column align-items-center justify-content-center mb-3"
+                    href="#">
+                    <i class="fa-solid fa-chalkboard" style="color: tomato;"></i>
+                    Studio
+                </a>
+                <a class="nav-link text-white d-flex flex-column align-items-center justify-content-center mb-3"
+                    href="#">
+                    <i class="fa-solid fa-arrow-right" style="color: tomato;"></i>
+                    Commons
+                </a>
+                <a class="nav-link text-white d-flex flex-column align-items-center justify-content-center mb-3"
+                    href="#">
+                    <i class="fa-solid fa-circle-question" style="color: tomato;"></i>
+                    Help
+                </a>
+            </div>
+            <div id="second-sidebar" class="col-md-3 col-lg-2 d-md-block bg-white sidebar"
+                style="max-width: 200px; padding-left: 20px;">
+                <div class="d-flex flex-column">
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="/kanbas/home.html">Home</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="#">Modules</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="#">Piazza</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="#">Zoom Meetings</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="#">Assignments</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="#">Quizzes</a>
+                    </div>
+                    <div class="mb-3" style="border-left: 3px solid black;">
+                        <a class="nav-link text-black" href="grades.html">Grades</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="#">People</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="#">Panopto Video</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="#">Credentials</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger" href="#">Progress Reports (EAB Navigate)</a>
+                    </div>
+                </div>
+            </div>
 
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li><a href="/kanbas/home.html">Home </a></li>
-                    <li><a href="#">Modules</a></li>
-                    <li><a href="#">Piazza</a></li>
-                    <li><a href="#">Zoom Meetings</a></li>
-                    <li><a href="#">Assignments</a></li>
-                    <li><a href="#">Quizzes</a></li>
-                    <li><a href="/kanbas/grades.html">Grades </a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Panopto Video</a></li>
-                    <li><a href="#">Discussions</a></li>
-                    <li><a href="#">Announcements</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Outcomes</a></li>
-                    <li><a href="#">Collaborations</a></li>
-                    <li><a href="#">Syllabus</a></li>
-                    <li><a href="#">Settings</a></li>
-                </ul>
-            </td>
-            <td>
-                <select>
-                    <option value="VAL1" selected>Gradebook</option>
-                </select>
-                <button type="button">Import</button>
-                <select>
-                    <option value="VAL1" selected>Gradebook</option>
-                </select>
-                <button type="button">Configure</button>
-                <h1>Student Names</h1>
-                <input placeholder="Search Students" />
-                <h1>Assignment Names</h1>
-                <input placeholder="Search Assignments" />
-                <br />
-                <br />
-                <button type="button">Apply Filters</button>
-                <br />
-                <br />
-                <table border="1">
-                    <tr>
-                        <th>Student Name</th>
-                        <th>Assignment 1</th>
-                        <th>Assignment 2</th>
-                        <th>Assignment 3</th>
-                        <th>Assignment 4</th>
-                    </tr>
-                    <tr>
-                        <td>Joe Marsh</td>
-                        <td><input value="99" /></td>
-                        <td>86</td>
-                        <td>65</td>
-                        <td>43</td>
-                    </tr>
-                    <tr>
-                        <td>Jack Sparrow</td>
-                        <td>99</td>
-                        <td><input value="99" /></td>
-                        <td>97</td>
-                        <td>96</td>
-                    </tr>
-                    <tr>
-                        <td>Andrew Yang</td>
-                        <td>100</td>
-                        <td>101</td>
-                        <td>102</td>
-                        <td><input value="99" /></td>
-                    </tr>
-                    <tr>
-                        <td>Joseph Johnny</td>
-                        <td>21</td>
-                        <td>53</td>
-                        <td><input value="99" /></td>
-                        <td>21</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+
+
+            <div class="col">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Course Name</li>
+                    <li class="breadcrumb-item">Term</li>
+                    <li class="breadcrumb-item">Section</li>
+                    <li class="breadcrumb-item">></li>
+                    <li class="breadcrumb-item active">Grades</li>
+                </ol>
+                <div class="container mt-4">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Student Name</th>
+                                <th class="text-center">Assignment 1</th>
+                                <th class="text-center">Assignment 2</th>
+                                <th class="text-center">Assignment 3</th>
+                                <th class="text-center">Assignment 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="align-middle">Joe Marsh</td>
+                                <td class="align-middle"><input class="form-control" value="99"></td>
+                                <td class="align-middle">86</td>
+                                <td class="align-middle">65</td>
+                                <td class="align-middle">43</td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle">Jack Sparrow</td>
+                                <td class="align-middle">99</td>
+                                <td class="align-middle"><input class="form-control" value="99"></td>
+                                <td class="align-middle">97</td>
+                                <td class="align-middle">96</td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle">Andrew Yang</td>
+                                <td class="align-middle">100</td>
+                                <td class="align-middle">101</td>
+                                <td class="align-middle">102</td>
+                                <td class="align-middle"><input class="form-control" value="99"></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle">Joseph Johnny</td>
+                                <td class="align-middle">21</td>
+                                <td class="align-middle">53</td>
+                                <td class="align-middle"><input class="form-control" value="99"></td>
+                                <td class="align-middle">21</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
 </body>
 
 </html>
