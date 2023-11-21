@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 function WorkingWithArrays() {
   
+    const [errorMessage, setErrorMessage] = useState(null);
+
     const API = "http://localhost:4000/a5/todos";
     const [todo, setTodo] = useState({
       id: 1,
@@ -13,15 +15,6 @@ function WorkingWithArrays() {
     const [todos, setTodos] = useState([]);
     const fetchTodos = async () => {
       const response = await axios.get(API);
-      setTodos(response.data);
-    };
-    const createTodo = async () => {
-      const response = await axios.get(`${API}/create`);
-      setTodos(response.data);
-    };
-    const removeTodo = async (todo) => {
-      const response = await axios
-        .get(`${API}/${todo.id}/delete`);
       setTodos(response.data);
     };
     const fetchTodoById = async (id) => {
@@ -37,6 +30,30 @@ function WorkingWithArrays() {
       const response = await axios.post(API, todo);
       setTodos([...todos, response.data]);
     };  
+    const deleteTodo = async (todo) => {
+      try {
+        const response = await axios.delete(
+          `${API}/${todo.id}`);
+        setTodos(todos.filter((t) => t.id !== todo.id));
+      } catch (error) {
+        console.log(error);
+        setErrorMessage(error.response.data.message);
+      }
+    }
+    const updateTodo = async () => {
+      try {
+        const response = await axios.put(
+          `${API}/${todo.id}`, todo);
+        setTodos(todos.map((t) => (
+          t.id === todo.id ? todo : t)));
+        setTodo({});
+      } catch (error) {
+        console.log(error);
+        setErrorMessage(error.response.data.message);
+      }  
+    }
+  
+
     useEffect(() => {
       fetchTodos();
     }, []);  
@@ -88,10 +105,13 @@ function WorkingWithArrays() {
           Edit
         </button>
               <button
-                onClick={() => removeTodo(todo)}
-                className="btn btn-danger float-end" >
-                Remove
-              </button>
+    onClick={() => deleteTodo(todo)}
+    className="btn btn-danger float-end ms-2">
+    Delete
+  </button>
+  <button onClick={updateTodo}>
+        Update Todo
+      </button>
               <input
               checked={todo.completed}
               type="checkbox" readOnly
@@ -103,6 +123,11 @@ function WorkingWithArrays() {
           </li>
         ))}
       </ul>
+      {errorMessage && (
+        <div className="alert alert-danger mb-2 mt-2">
+          {errorMessage}
+        </div>
+      )}
       </div>
     );
   }
