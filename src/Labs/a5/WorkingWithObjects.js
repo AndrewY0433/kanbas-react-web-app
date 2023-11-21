@@ -27,6 +27,12 @@ function WorkingWithObjects() {
     <div>
       <h3>Working With Objects</h3>
       <h4>Modifying Properties</h4>
+      <input
+        onChange={(e) => setAssignment({ ...assignment,
+            title: e.target.value })}
+        value={assignment.title}
+        className="form-control mb-2 w-75"
+        type="text" />
       <button onClick={updateTitle}
               className="w-100 btn btn-primary mb-2">
         Update Title to: {assignment.title}
