@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
-import db from "../Database";
 function Dashboard(
   { courses, course, setCourse, addNewCourse,
     deleteCourse, updateCourse }
@@ -25,7 +24,8 @@ function Dashboard(
       </button>
       <div className="list-group">
         {courses.map((course) => (
-          <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="list-group-item">
+
+          <Link key={course._id} to={`/Kanbas/Courses/${course._id.$oid}`} className="list-group-item">
             <button
               onClick={(event) => {
                 event.preventDefault();
