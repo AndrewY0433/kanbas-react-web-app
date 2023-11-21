@@ -23,7 +23,7 @@ function Kanbas() {
     findAllCourses();
   }, []);
 
-  const addCourse = async (course) => {
+  const addCourse = async () => {
     const response = await axios.post(URL, course);
     setCourses([
       response.data,
@@ -31,21 +31,23 @@ function Kanbas() {
     ]);
   }
   const deleteCourse = async (course) => {
+    console.log(course)
     const response = await axios.delete(
-      `${URL}/${course._id}`
+      `${URL}/${course.$oid}`
     );
     setCourses(courses.filter(
-      (c) => c._id !== course._id));
+      (c) => c._id.$oid !== course.$oid));
   };
 
   const updateCourse = async (course) => {
+    console.log(course)
     const response = await axios.put(
       `${URL}/${course._id}`,
       course
     );
     setCourses(
       courses.map((c) => {
-        if (c._id === course._id) {
+        if (c._id.$oid === course._id.$oid) {
           return course;
         }
         return c;

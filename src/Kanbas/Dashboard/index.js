@@ -19,13 +19,12 @@ function Dashboard(
       <button onClick={addNewCourse} >
         Add
       </button>
-      <button onClick={updateCourse} >
+      <button onClick={() => updateCourse(course)} >
         Update
       </button>
       <div className="list-group">
         {courses.map((course) => (
-
-          <Link key={course._id} to={`/Kanbas/Courses/${course._id.$oid}`} className="list-group-item">
+          <Link key={course._id.$oid} to={`/Kanbas/Courses/${course._id.$oid}`} className="list-group-item">
             <button
               onClick={(event) => {
                 event.preventDefault();
