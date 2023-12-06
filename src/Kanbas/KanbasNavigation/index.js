@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 function KanbasNavigation() {
-  const links = ["Account", "Dashboard", "Courses", "Calendar", "Signin"];
+  const links = ["Account", "Dashboard", "Courses", "Calendar", "Signin", "Signup", "Users"];
   const { pathname } = useLocation();
   return (
     <div className="list-group" style={{ width: 150 }}>

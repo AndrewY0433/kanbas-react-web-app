@@ -9,6 +9,8 @@ import { Provider } from "react-redux";
 import axios from "axios";
 import Signin from "../users/signin";
 import Account from "../users/account";
+import Signup from "../users/signup";
+import UserTable from "../users/table";
 
 
 
@@ -18,7 +20,8 @@ function Kanbas() {
     name: "New Course", number: "New Number",
     startDate: "2023-09-10", endDate: "2023-12-15",
   });
-  const URL = "http://localhost:4000/api/courses";
+  const URL = `${process.env.REACT_APP_BASE_API_URL}/api/courses`;
+
   const findAllCourses = async () => {
     const response = await axios.get(URL);
     setCourses(response.data);
@@ -68,7 +71,9 @@ function Kanbas() {
           <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />
             <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/account" element={<Account />} />
+            <Route path="/users" element={<UserTable />} />
             <Route path="Dashboard" element={
               <Dashboard
                 courses={courses}
