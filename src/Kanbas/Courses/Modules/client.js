@@ -3,7 +3,6 @@ const API_BASE = process.env.REACT_APP_API_BASE
 const MODULES_URL = `${API_BASE}/modules`;
 const COURSES_URL = `${API_BASE}/courses`;
 export const findModulesForCourse = async (courseId) => {
-  console.log(`${COURSES_URL}/${courseId}/modules`)
   const response = await axios
     .get(`${COURSES_URL}/${courseId}/modules`);
   return response.data;
@@ -15,7 +14,7 @@ export const createModule = async (courseId, module) => {
   );
   return response.data;
 };
-//test
+
 export const deleteModule = async (moduleId) => {
   const response = await axios
     .delete(`${MODULES_URL}/${moduleId}`);

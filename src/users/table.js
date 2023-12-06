@@ -7,7 +7,6 @@ function UserTable() {
     const [user, setUser] = useState({ username: "", password: "", role: "USER" });
     const createUser = async () => {
         try {
-            console.log("PROBLEM?")
             const newUser = await client.createUser(user);
             setUsers([newUser, ...users]);
         } catch (err) {

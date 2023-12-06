@@ -13,14 +13,13 @@ function Account() {
     };
     const signout = async () => {
         await client.signout();
-        navigate("/project/signin");
+        navigate("/kanbas/signin");
     };
 
     useEffect(() => {
         fetchAccount();
     }, []);
 
-    console.log(account);
     return (
         <div className="w-100">
             <h1>Account</h1>
